@@ -96,7 +96,7 @@ export function ProductCard({
 
             {/* PRICE */}
             <div className="price">
-              <Text className="flex gap-4">
+              <span>
                 <Money withoutTrailingZeros data={price} />
                 {isDiscounted(price, compareAtPrice) && (
                   <CompareAtPrice
@@ -104,7 +104,7 @@ export function ProductCard({
                     data={compareAtPrice}
                   />
                 )}
-              </Text>
+              </span>
             </div>
 
           </div>

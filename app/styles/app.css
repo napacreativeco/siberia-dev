@@ -19,6 +19,7 @@
   --mingliu: 'MingLiU';
   --siberia-blue: #B6FFFE;
   --black: #00241D;
+  --dark-grey: #555555;
   --white: #ffffff;
   --red: #FF0000;
 
@@ -392,6 +393,7 @@ table {
 .home-collection {
   /* margin-top: 100vh; */
   padding-top: 80px;
+  padding-bottom: 80px;
   width: 100%;
   max-width: 100%;
   color: var(--black);
@@ -425,44 +427,51 @@ table {
   margin-right: 12px;
 }
 
-/* Title */
-.home-collection .product-title h3 {
-    font-size: 1.3rem;
-    font-weight: 200;
-    line-height: 1.3;
-    letter-spacing: -1px;
-    text-align: left;
-}
-
-/* Tag */
-.home-collection .product-tag {
-  font-family: 'MingLiU';
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 12px;
-  letter-spacing: -1px;
-  text-align: left;
-}
-
-.home-collection img {
-  max-width: 100%;
-}
 
 /* Card */
 .product-card .product-info {
   position: relative;
+  margin-left: 30px;
+  width: calc(100% - 30px);
+  font-size: 1.1rem;
+  letter-spacing: -1px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
-.product-card .product-info .sale-indicator > span {
-  position: absolute;
-  left: -2rem;
+
+/* Image */
+.home-collection img {
+  max-width: 100%;
+}
+
+/* Title */
+.home-collection .product-title h3 {
+  display: block;
+  text-align: left;
+  color: var(--dark-grey);
+}
+
+
+/* Tag */
+.home-collection .product-tag {
+  font-family: 'MingLiU';
+  font-weight: 400;
+  text-align: left;
+  color: var(--black);
 }
 .product-card .product-info .sale-indicator > span {
+  position: absolute;
+  left: -2.1rem;
+  top: 0.2rem;
   background: var(--black);
   color: var(--red);
   padding: 3px 4px;
   font-style: italic;
-  font-size: .8rem;
+  font-size: .74rem;
+  letter-spacing: 1px;
+  text-transform: lowercase;
 }
 
 
@@ -581,7 +590,10 @@ table {
 */
 footer {
   text-transform: lowercase;
-  min-height: 80px;
+  min-height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 footer ul {
   padding: 40px 20px 80px 0;
