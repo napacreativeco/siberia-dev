@@ -1,6 +1,8 @@
-export function PlusOverlay() {
+import {useState} from 'react';
+
+export function PlusOverlay({ open }) {
     return (
-        <div id="plus-overlay" className="plus-overlay">
+        <div id="plus-overlay" style={{ display: open }} className="plus-overlay">
             <ul className="header">
                 <li className="active">shop</li>
                 <li>about</li>
@@ -27,15 +29,22 @@ export function PlusOverlay() {
 
 export default function PlusHamburger() {
 
-    const handleClick = () => {
-        const overlay = document.getElementById('plus-overlay');
+    const [open, setOpen] = useState('none');
 
-        overlay.style.display = 'block';
+    const handleClick = () => {
+
+        if (open === 'none') {
+            setOpen('block');
+        } else {
+            setOpen('none');
+        }
+        
+        // const overlay = document.getElementById('plus-overlay');
     }
 
     return (
         <div className="plus-hamburger">
-            <PlusOverlay />
+            <PlusOverlay open={open} />
             <div className="wrapper">
                 <span className="plus" onClick={handleClick}>
                     <img src="/cross.svg" alt="Open Filters" />

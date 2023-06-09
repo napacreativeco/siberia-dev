@@ -64,6 +64,7 @@ export default function HeroNavigation() {
             duration: 0.24,
             scrollTrigger: {
               trigger: "#modules",
+              start: "top top",
               toggleActions: "restart none none reverse"
             }
         });
@@ -74,6 +75,7 @@ export default function HeroNavigation() {
             duration: 0.24,
             scrollTrigger: {
                 trigger: "#modules",
+                start: "top top",
                 toggleActions: "restart none none reverse"
             }
         });
