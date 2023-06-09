@@ -3,7 +3,7 @@
 */
 
 import {defer} from '@shopify/remix-oxygen';
-import {Suspense, useState, useLayoutEffect, useRef } from 'react';
+import {Suspense, useState, useEffect, useRef } from 'react';
 import {Await, useLoaderData} from '@remix-run/react';
 import {AnalyticsPageType} from '@shopify/hydrogen';
 import { gsap } from "gsap";
@@ -124,6 +124,40 @@ export default function Homepage() {
 
   // TODO: skeletons vs placeholders
   const skeletons = getHeroPlaceholder([{}, {}, {}]);
+
+  useEffect(() => {
+    console.log('on effect');
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 100) {
+
+        // Hide Marquee
+        gsap.to(".marquee-container", {
+            y: 100,
+            delay: 0.6,
+            duration: 0.2,
+            onComplete: () => {
+                gsap.to(".marquee-container", { display: "none" });
+            }
+        });
+
+      } else {
+
+        // Show Marquee
+        gsap.to(".marquee-container", {
+            y: 0,
+            delay: 0.6,
+            duration: 0.2,
+            onComplete: () => {
+                gsap.to(".marquee-container", { display: "block" });
+            }
+        });
+      }
+      console.log('scrolling');
+    });
+  }, []);
+
 
   return (
     <div ref={app}>
