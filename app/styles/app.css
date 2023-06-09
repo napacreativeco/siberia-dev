@@ -323,7 +323,9 @@ table {
 .hero-navigation .left .title h1 {
   font-size: 4rem;
   text-transform: lowercase;
-  letter-spacing: 0.84rem;
+  letter-spacing: 0.04rem;
+  color: var(--black);
+  font-family: var(--mingliu);
 }
 
 /* Links */
