@@ -1,4 +1,4 @@
-import {ProductCard, Section} from '~/components';
+import {ProductCard} from '~/components';
 import ProductList from '~/components/ProductList';
 
 
@@ -36,17 +36,6 @@ export default function HomeCollection({
           />
         ))}
       </div>
-
-      
-      {/* LIST */}
-      {/* <div className="wrapper">
-        {products.map((product) => (
-          <ProductList
-            product={product}
-            key={product.id}
-          />
-        ))}
-      </div> */}
 
     </section>
   );
