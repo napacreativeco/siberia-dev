@@ -47,8 +47,7 @@
   src: url('/app/styles/fonts/fonts/MingLiU.eot');
   src: url('/app/styles/fonts/fonts/MingLiU.eot?#iefix') format('embedded-opentype'),
       url('/app/styles/fonts/MingLiU.woff2') format('woff2'),
-      url('/app/styles/fonts/MingLiU.woff') format('woff'),
-      url('/app/styles/fonts/MingLiU.svg#MingLiU') format('svg');
+      url('/app/styles/fonts/MingLiU.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
