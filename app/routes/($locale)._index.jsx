@@ -26,7 +26,7 @@ import About from '~/components/About';
 import PlusHamburger from '~/components/PlusHamburger';
 
 import Marquee from "react-fast-marquee";
-
+import NewsletterModal from '~/components/NewsletterModal';
 
 export const headers = routeHeaders;
 
@@ -156,6 +156,17 @@ export default function Homepage() {
       }
       console.log('scrolling');
     });
+
+    
+    /* Newsletter Popup */
+    setTimeout(function() {
+      gsap.to(".newsletter-modal", {
+        display: "flex",
+      });
+    }, 3000);
+
+    
+
   }, []);
 
 
@@ -164,6 +175,9 @@ export default function Homepage() {
 
       {/* NAVIGATION COMPONENET */}
       <HeroNavigation className="box" />
+
+      {/* MODAL */}
+      <NewsletterModal />
 
       {/* MARQUEE */}
       <Marquee autoFill={true} className="marquee-component">
