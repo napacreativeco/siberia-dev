@@ -35,6 +35,7 @@ export function ProductCard({
     productGid: product.id,
     variantGid: firstVariant.id,
     name: product.title,
+    vendor: product.vendor,
     variantName: firstVariant.title,
     brand: product.vendor,
     price: firstVariant.price.amount,
@@ -43,11 +44,12 @@ export function ProductCard({
 
   return (
     <div className="product-card">
-      <Link
+      {/* <Link
         onClick={onClick}
         to={`/products/${product.handle}`}
         prefetch="intent"
-      >
+      > */}
+      <article>
           {/* PRODUCT IMAGE */}
           <div className="card-image aspect-[4/5] bg-primary/5">
             {image && (
@@ -81,7 +83,7 @@ export function ProductCard({
             {/* TAG */}
             <div className="product-tag">
               <h3>
-                Shadow
+                {product.vendor}
               </h3>
             </div>    
 
@@ -108,8 +110,8 @@ export function ProductCard({
             </div>
 
           </div>
-        
-      </Link>
+      </article>
+      {/* </Link> */}
       {quickAdd && (
 
         <AddToCartButton
