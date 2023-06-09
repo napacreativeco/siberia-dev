@@ -163,7 +163,7 @@ export default function Homepage() {
       gsap.to(".newsletter-modal", {
         display: "flex",
       });
-    }, 3000);
+    }, 15000);
 
     
 
