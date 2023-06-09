@@ -23,7 +23,6 @@ import {routeHeaders, CACHE_SHORT} from '~/data/cache';
 import HeroNavigation from '~/components/heroNavigation';
 import HomeCollection from '~/components/homeCollection';
 import About from '~/components/About';
-import PlusHamburger from '~/components/PlusHamburger';
 
 import Marquee from "react-fast-marquee";
 import NewsletterModal from '~/components/NewsletterModal';
@@ -204,10 +203,6 @@ export default function Homepage() {
             </Await>
           </Suspense>
         )}
-
-        
-        {/* PLUS MENU */}
-        <PlusHamburger />
 
         {/* ABOUT */}
         <About />

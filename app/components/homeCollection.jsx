@@ -1,5 +1,6 @@
 import {ProductCard} from '~/components';
 import ProductList from '~/components/ProductList';
+import PlusHamburger from '~/components/PlusHamburger';
 
 
 const mockProducts = new Array(16).fill('');
@@ -36,6 +37,12 @@ export default function HomeCollection({
           />
         ))}
       </div>
+
+      <div className="shop-footer">
+        {/* PLUS MENU */}
+        <PlusHamburger />
+      </div>
+
 
     </section>
   );
