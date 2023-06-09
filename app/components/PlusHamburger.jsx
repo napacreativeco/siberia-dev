@@ -17,6 +17,10 @@ export function PlusOverlay() {
                     <li>womens</li>
                 </ul>
             </div>
+            <ul className="footer">
+                <li>terms</li>
+                <li>policy/questions</li>
+            </ul>
         </div>
     );
 }

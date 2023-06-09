@@ -66,6 +66,8 @@ export function ProductCard({
           {/* PRODUCT INFO */}
           <div className="product-info">
 
+
+            {/* SALES INDICATOR */}
             <div className="sale-indicator">
               {cardLabel ? (
                 <span>
@@ -74,9 +76,17 @@ export function ProductCard({
               ) : (
                 <div></div>
               )}
- 
-            </div>   
+            </div> 
 
+            {/* TAG */}
+            <div className="product-tag">
+              <h3>
+                Shadow
+              </h3>
+            </div>    
+
+
+            {/* TITLE */}
             <div className="product-title">
               <h3>
                 {product.title}
@@ -84,7 +94,8 @@ export function ProductCard({
             </div>  
 
 
-            <div className="flex gap-4">
+            {/* PRICE */}
+            <div className="price">
               <Text className="flex gap-4">
                 <Money withoutTrailingZeros data={price} />
                 {isDiscounted(price, compareAtPrice) && (
