@@ -257,6 +257,9 @@ table {
   left: 0;
 }
 .topbar .wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -377,7 +380,9 @@ table {
 */
 #modules {
   display: block;
-  margin-top: 20vh;
+  margin: 20vh auto 0 auto;
+  width: 100%;
+  max-width: 960px;
 }
 /* 
 * ===============
@@ -397,8 +402,9 @@ table {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   width: 100%;
+  max-width: 960px;
   padding: 0px;
-  margin: 0px;
+  margin: 0px auto;
 }
 
 /* Grid Changer */
