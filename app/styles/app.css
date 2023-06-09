@@ -7,8 +7,7 @@
   src: url('./fonts/MingLiU.eot');
   src: url('./fonts/MingLiU.eot?#iefix') format('embedded-opentype'),
       url('./fonts/MingLiU.woff2') format('woff2'),
-      url('./fonts/MingLiU.woff') format('woff'),
-      url('./fonts/MingLiU.svg#MingLiU') format('svg');
+      url('./fonts/MingLiU.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
