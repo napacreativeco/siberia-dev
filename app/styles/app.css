@@ -22,6 +22,7 @@
   --dark-grey: #555555;
   --white: #ffffff;
   --red: #FF0000;
+  --thin: 960px;
 
   --color-primary: 20 20 20; /* Text, buttons, etc. */
   --color-contrast: 250 250 249; /* Backgrounds, borders, etc. */
@@ -259,7 +260,7 @@ table {
 }
 .topbar .wrapper {
   width: 100%;
-  max-width: 960px;
+  max-width: var(--thin);
   margin: 0 auto;
   padding: 20px;
   display: flex;
@@ -383,9 +384,9 @@ table {
 */
 #modules {
   display: block;
-  margin: 20vh auto 0 auto;
+  margin: 0 auto 0 auto;
   width: 100%;
-  max-width: 960px;
+  max-width: var(--thin);
   position: relative;
 }
 /* 
@@ -407,7 +408,7 @@ table {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   width: 100%;
-  max-width: 960px;
+  max-width: var(--thin);
   padding: 0px;
   margin: 0px auto;
 }
@@ -706,6 +707,66 @@ footer ul {
   padding: 4px 14px;
   font-size: 0.8rem;
   text-transform: uppercase;
+}
+
+/* 
+* ===============
+* Cart Modal 
+* =============== 
+*/
+.cart-modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  z-index: 9;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cart-modal .cart-route {
+  max-width: var(--thin);
+}
+
+.cart-modal > div {
+  width: 100%;
+}
+
+.cart-modal .underscore {
+  width: 100%;
+  height: 1px;
+  background: var(--black);
+}
+
+.cart-modal .cart {
+  width: 100%;
+}
+.cart-modal .disclaimer-text {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.cart-modal span {
+  text-align: center;
+}
+.cart-modal button {
+  padding: 10px 20px;
+  border: 1px solid var(--black);
+  font-size: 1.2rem;
+  border-radius: 0px !important;
+}
+
+/* Empty Cart */
+.empty-cart .text-holder {
+  text-align: center;
+}
+.empty-cart .button-holder {
+  text-align: center;
 }
 
 

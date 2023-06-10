@@ -35,7 +35,7 @@ export function CartDetails({layout, cart}) {
   };
 
   return (
-    <div>
+    <div className={container[layout]}>
       <CartLines lines={cart?.lines} layout={layout} />
       {cartHasItems && (
         <CartSummary cost={cart.cost} layout={layout}>
@@ -330,12 +330,6 @@ function CartLinePrice({line, priceType = 'regular', ...passthroughProps}) {
   return <Money withoutTrailingZeros {...passthroughProps} data={moneyV2} />;
 }
 
-
-/*
-* ==================================
-* EMPTY CART
-* ==================================
-*/
 export function CartEmpty({hidden = false, layout = 'drawer', onClose}) {
   const scrollRef = useRef(null);
   const {y} = useScroll(scrollRef);
@@ -352,21 +346,24 @@ export function CartEmpty({hidden = false, layout = 'drawer', onClose}) {
   };
 
   return (
-    <div className="cart empty-cart" ref={scrollRef} hidden={hidden}>
-      <section className="grid gap-6 cart-wrapper">
-
-        <div className="text-holder">
-            <Text format>
-            Your cart is empty
-            </Text>
-        </div>
-
-        <div className="underscore"></div>
-
-        <div className="button-holder">
+    <div ref={scrollRef} className={container[layout]} hidden={hidden}>
+      <section className="grid gap-6">
+        <Text format>
+          Looks like you haven&rsquo;t added anything yet, let&rsquo;s get you
+          started!
+        </Text>
+        <div>
           <Button onClick={onClose}>Continue shopping</Button>
         </div>
-
+      </section>
+      <section className="grid gap-8 pt-16">
+        <FeaturedProducts
+          count={4}
+          heading="Shop Best Sellers"
+          layout={layout}
+          onClose={onClose}
+          sortKey="BEST_SELLING"
+        />
       </section>
     </div>
   );
