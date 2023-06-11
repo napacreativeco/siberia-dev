@@ -2,8 +2,10 @@ import {useParams, Form, Await, useMatches} from '@remix-run/react';
 import {useWindowScroll} from 'react-use';
 import {Disclosure} from '@headlessui/react';
 import {Suspense, useEffect, useMemo} from 'react';
-import SlimFooter from '~/components/SlimFooter';
 import Topbar from '~/components/Topbar';
+import CreditCards from '~/components/CreditCards';
+
+import CartModal from '~/components/CartModal';
 
 import {
   Drawer,
@@ -34,6 +36,27 @@ export function Layout({children, layout}) {
 
       <Topbar />
 
+      {/* CART MODAL */}
+      <div className="cart-modal">
+        <div className="header">
+          <div className="title">Cart</div>
+          <div className="logo">
+            <img src="/outline-logo.svg" alt="SIBERIA" />
+          </div>
+        </div>
+        <CartModal />
+
+        <div className="credit-card-container">
+          <CreditCards />
+        </div>
+
+        <div className="disclaimer-text">
+          <span>
+            For further details please consult the <a href="/pages/return-policy/" title="Return Policy">Return Policy</a>
+          </span>
+        </div>
+      </div>
+
       <div className="flex flex-col min-h-screen">
 
         <main role="main" id="mainContent" className="flex-grow">
@@ -41,8 +64,6 @@ export function Layout({children, layout}) {
         </main>
 
       </div>
-
-      <SlimFooter />
       
     </>
   );

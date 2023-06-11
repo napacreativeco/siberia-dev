@@ -299,6 +299,12 @@ const CART_QUERY = `#graphql
                 handle
                 title
                 id
+                vendor
+                options {
+                  id
+                  name
+                  values
+                }
               }
               selectedOptions {
                 name

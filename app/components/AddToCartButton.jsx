@@ -24,17 +24,16 @@ export function AddToCartButton({
       <input type="hidden" name="countryCode" value={selectedLocale.country} />
       <input type="hidden" name="lines" value={JSON.stringify(lines)} />
       <input type="hidden" name="analytics" value={JSON.stringify(analytics)} />
-      <Button
-        as="button"
+      <button
         type="submit"
         width={width}
         variant={variant}
-        className={className}
+        className="add-to-cart-button"
         disabled={disabled ?? fetcherIsNotIdle}
         {...props}
       >
         {children}
-      </Button>
+      </button>
     </fetcher.Form>
   );
 }

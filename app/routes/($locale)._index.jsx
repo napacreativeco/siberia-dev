@@ -24,6 +24,7 @@ import HeroNavigation from '~/components/heroNavigation';
 import HomeCollection from '~/components/homeCollection';
 import About from '~/components/About';
 import CartModal from '~/components/CartModal';
+import SlimFooter from '~/components/SlimFooter';
 
 import Marquee from "react-fast-marquee";
 import NewsletterModal from '~/components/NewsletterModal';
@@ -179,17 +180,6 @@ export default function Homepage() {
       {/* MODAL */}
       <NewsletterModal />
 
-      {/* CART MODAL */}
-      <div className="cart-modal">
-        <CartModal />
-        <div className="disclaimer-text">
-          <span>
-            For further details please consult the Return Policy
-          </span>
-        </div>
-      </div>
-      
-
       {/* MARQUEE */}
       <Marquee autoFill={true} className="marquee-component">
         &nbsp;Our fabric is our honor Let the Last 
@@ -221,6 +211,7 @@ export default function Homepage() {
 
       </section>
 
+      <SlimFooter />
 
     </div>
   );
