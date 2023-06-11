@@ -22,7 +22,7 @@ export function Cart({layout, onClose, cart}) {
     <>
       <CartEmpty hidden={linesCount} onClose={onClose} layout={layout} />
       <CartDetails cart={cart} layout={layout} />
-      <CartCheckoutActions className="checkout-actions" cartInfo={cart} checkoutUrl={cart.checkoutUrl} />
+      {/* <CartCheckoutActions className="checkout-actions" cartInfo={cart} checkoutUrl={cart.checkoutUrl} /> */}
     </>
   );
 }
